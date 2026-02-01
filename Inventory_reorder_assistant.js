@@ -1,3 +1,4 @@
+// Initialize variables
 let itemName = "Artbook";
 let unitCost = 15;
 let currentStock = 40;
@@ -6,12 +7,14 @@ let targetStock = 50;
 let weeklyDemand = 7;
 let supplierLeadTimeWeeks = 1.5;
 
+// Calculate inventory metrics
 let weeksOfCover = weeklyDemand > 0 ? currentStock / weeklyDemand : Infinity;
 let stockDeficit = Math.max(0, targetStock - currentStock);
 let reorderQuantity = (currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks) ? Math.ceil(stockDeficit) : 0;
 let estimatedReorderCost = reorderQuantity * unitCost;
 let reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks;
 
+// Print to console
 console.log(` - Inventory Report - `);
 console.log(`Item Name: ${itemName}`);
 console.log(`Weeks of Cover: ${weeksOfCover.toFixed(2)}`);
