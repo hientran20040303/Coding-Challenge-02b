@@ -19,4 +19,4 @@ The logic is built to be "defensive," preventing common mathematical errors like
 ## 🏃 How to Run Locally
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/hientran20040303/inventory-reorder-logic-tool.git
+   git clone https://github.com/hientran20040303/inventory-reorder-assistant
